@@ -19,7 +19,7 @@ function toggleTheme() {
 
     <a
       rel="noreferrer"
-      href="https://github.com/devymurr/primevue"
+      href="https://github.com/clayzenx/primevue-test"
       target="_blank"
       title="GitHub"
     >
