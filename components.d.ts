@@ -9,10 +9,20 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ApiTable: typeof import('./src/components/ui/ApiTable.vue')['default']
     Button: typeof import('primevue/button')['default']
+    Calendar: typeof import('primevue/calendar')['default']
+    Card: typeof import('primevue/card')['default']
+    Column: typeof import('primevue/column')['default']
+    DataTable: typeof import('primevue/datatable')['default']
+    InputLink: typeof import('./src/components/ui/InputLink.vue')['default']
     InputText: typeof import('primevue/inputtext')['default']
+    InputTime: typeof import('./src/components/ui/InputTime.vue')['default']
+    MultiSelect: typeof import('primevue/multiselect')['default']
+    MultiSelector: typeof import('./src/components/ui/MultiSelector.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchTable: typeof import('./src/components/ui/SearchTable.vue')['default']
     TheCounter: typeof import('./src/components/TheCounter.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
