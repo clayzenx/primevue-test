@@ -1,31 +1,34 @@
 <script setup>
 const prime = usePrimeVue()
 
-const darkModel = computed({
-  get() { return isDark.value },
-  set(_v) {
-    toggleDark()
-    prime.changeTheme(`soho-${isDark.value ? 'dark' : 'light'}`, `soho-${isDark.value ? 'light' : 'dark'}`, 'prime')
-  },
-})
+function toggleTheme() {
+  toggleDark()
+  prime.changeTheme(`soho-${isDark.value ? 'dark' : 'light'}`, `soho-${isDark.value ? 'light' : 'dark'}`, 'prime')
+}
 </script>
 
 <template>
-  <nav mt-6 inline-flex gap-2 text-xl>
-    <ToggleButton
-      v-model="darkModel"
-      on-label="Night"
-      off-label="Light"
-      on-icon="i-carbon-moon"
-      off-icon="i-carbon-sun"
+  <nav mt-6 inline-flex items-center gap-2 text-xl>
+    <Button
+      :icon="isDark ? 'i-carbon-moon' : 'i-carbon-sun'"
+      text
+      rounded
+      aria-label="Theme"
+      @click="toggleTheme()"
     />
 
     <a
-      i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com/antfu/vitesse-lite"
+      href="https://github.com/devymurr/primevue"
       target="_blank"
       title="GitHub"
-    />
+    >
+      <Button
+        icon="i-carbon-logo-github"
+        text
+        rounded
+        aria-label="Source"
+      />
+    </a>
   </nav>
 </template>
