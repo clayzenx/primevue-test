@@ -35,6 +35,11 @@ export default defineConfig({
         'vue/macros',
         'vue-router',
         '@vueuse/core',
+        {
+          'primevue/config': [
+            'usePrimeVue',
+          ],
+        },
       ],
       dts: true,
       dirs: [

@@ -1,13 +1,12 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
+import PrimeVue from 'primevue/config'
 import App from './App.vue'
 
-import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
 // primevue
-import 'primevue/resources/themes/lara-light-indigo/theme.css'
 import 'primevue/resources/primevue.min.css'
 import 'primeicons/primeicons.css'
 
@@ -17,4 +16,5 @@ const router = createRouter({
   routes,
 })
 app.use(router)
+app.use(PrimeVue)
 app.mount('#app')
