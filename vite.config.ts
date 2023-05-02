@@ -5,6 +5,7 @@ import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
+import { PrimeVueResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -45,6 +46,7 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [PrimeVueResolver()],
     }),
 
     // https://github.com/antfu/unocss
